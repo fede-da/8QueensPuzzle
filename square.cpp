@@ -6,6 +6,7 @@
 //
 
 #include "square.hpp"
+#include <iostream>
 
 Square:: Square(int nx, int ny)
 {
@@ -19,3 +20,7 @@ bool Square::isAvaible(){
 }
 
 void Square::swapStatus() {avaible=!avaible;}
+
+void Square::printValue(){
+    std::cout << avaible << " ";
+}

@@ -14,9 +14,11 @@ class Square{
     int y;
     bool avaible;
     public :
+    Square() : avaible(false) {};
     Square(int ,int);
     bool isAvaible();
-    void swapStatus() ;
+    void swapStatus();
+    void printValue();
 };
 
 #endif /* square_hpp */

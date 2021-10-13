@@ -7,13 +7,15 @@
 
 #ifndef chessboard_hpp
 #define chessboard_hpp
-#import "square.hpp"
+#include "square.hpp"
+#include <vector>
 
 class Chessboard{
-    Square squares[8][8];
+    std::vector<std::vector<Square>> squares;
 public:
     Chessboard();
-    ~Chessboard();
+    void printBoard();
+    //~Chessboard(); later
 };
 
 #endif /* chessboard_hpp */

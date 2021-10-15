@@ -14,15 +14,15 @@ class Chessboard{
     std::vector<std::vector<std::unique_ptr<Square>> > squares;
 public:
     Chessboard();
+    bool insertOnRow(int,int,int,int);
     void printBoard();
     void setConflict(int,int);
     void solveConflict(int,int);
-    bool setQueen(int,int);
-    bool unsetQueen(int,int);
+    void setQueen(int,int);
+    void unsetQueen(int,int);
     bool isAvaible(int,int);
     void printStatusAt(int,int);
-    bool checkIfAvaible(int,int);
-    bool solve();
+    bool solve(int,int);
     //~Chessboard(); later
 };
 

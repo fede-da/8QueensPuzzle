@@ -30,6 +30,6 @@ void Puzzle::printStatusAt(int x, int y){
     cb.printStatusAt(x, y);
 }
 
-bool Puzzle::solve(){
-    return cb.solve();
+bool Puzzle::solve(int x,int y){
+    return cb.solve(0,0);
 }

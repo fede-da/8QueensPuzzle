@@ -18,7 +18,7 @@ public:
     void printBoard();
     void setQueen(int,int);
     void unsetQueen(int,int);
-    bool solve();
+    bool solve(int,int);
     void printStatusAt(int,int);
     void printBoard2();
 };

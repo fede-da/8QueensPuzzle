@@ -10,12 +10,26 @@
 Puzzle::Puzzle()
 {
     cb=Chessboard();
-    queens.reserve(8);
-    for(int j = 0;j<8;j++){
-      queens.push_back(Queen());
-    }
 }
 
 void Puzzle::printBoard(){
     cb.printBoard();
+}
+
+void Puzzle::setQueen(int nx,int ny)
+{
+    cb.setQueen(nx, ny);
+}
+
+void Puzzle::unsetQueen(int nx,int ny)
+{
+    cb.unsetQueen(nx, ny);
+}
+
+void Puzzle::printStatusAt(int x, int y){
+    cb.printStatusAt(x, y);
+}
+
+bool Puzzle::solve(){
+    return cb.solve();
 }

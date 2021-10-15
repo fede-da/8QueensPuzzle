@@ -6,9 +6,19 @@
 //
 
 #include "Queen.hpp"
-Queen:: Queen(){}
 
-Queen:: Queen(int a, int b){
-    x=a;
-    y=b;
+#include <iostream>
+Queen:: Queen(){
+    Square::makeSquareUnavaible();
+}
+
+Queen:: Queen(int a, int b) : Square(a, b){
+    Square::makeSquareUnavaible();
+}
+bool Queen::isAvaible(){
+    return  Square::isAvaible();
+}
+
+void Queen::printValue() {
+    std::cout << "Q ";
 }

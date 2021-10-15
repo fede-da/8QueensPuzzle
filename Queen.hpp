@@ -7,13 +7,14 @@
 
 #ifndef Queen_hpp
 #define Queen_hpp
+#include "square.hpp"
 
-class Queen{
-    int x;
-    int y;
+class Queen : public Square{
 public:
     Queen();
     Queen(int ,int );
+    void printValue () override;
+    bool isAvaible();
 };
 
 #endif /* Queen_hpp */

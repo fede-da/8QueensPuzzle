@@ -13,11 +13,14 @@
 
 class Puzzle{
     Chessboard cb;
-    std::vector<Queen> queens;
 public:
     Puzzle();
     void printBoard();
-    void setQueen(Queen);
+    void setQueen(int,int);
+    void unsetQueen(int,int);
+    bool solve();
+    void printStatusAt(int,int);
+    void printBoard2();
 };
 
 #endif /* Puzzle_hpp */

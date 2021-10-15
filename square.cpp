@@ -8,6 +8,11 @@
 #include "square.hpp"
 #include <iostream>
 
+Square:: Square()
+{
+    avaible=true;
+}
+
 Square:: Square(int nx, int ny)
 {
     x=nx;
@@ -15,12 +20,23 @@ Square:: Square(int nx, int ny)
     avaible=true;
 }
 
-bool Square::isAvaible(){
-    return avaible;
-}
-
-void Square::swapStatus() {avaible=!avaible;}
-
 void Square::printValue(){
-    std::cout << avaible << " ";
+    std::cout << isAvaible() << " ";
+};
+
+bool Square::isAvaible(){
+    return Square::avaible;
 }
+
+void Square::makeSquareUnavaible() {avaible=false;}
+
+void Square::makeSquareAvaible() {avaible=true;}
+
+void Square::setCoord(int a, int b){
+    x=a;
+    y=b;
+}
+
+
+
+

@@ -9,5 +9,6 @@ If you want to use your own makefile remember to use : -std=c++14 (make_unique r
 
 Download SFML : 
 - https://www.sfml-dev.org/download/sfml/2.5.1/
+
 Tutorial setup :
 - https://www.sfml-dev.org/tutorials/2.5/

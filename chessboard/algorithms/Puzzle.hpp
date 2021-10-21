@@ -21,6 +21,7 @@ public:
     bool solve(int,int);
     void printStatusAt(int,int);
     void printBoard2();
+    std::vector<Queen> getQueens();
 };
 
 #endif /* Puzzle_hpp */

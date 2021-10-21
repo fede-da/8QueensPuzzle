@@ -16,6 +16,8 @@ class Square{
     public :
     Square();
     Square(int ,int);
+    int getX();
+    int getY();
     bool isAvaible();
     void makeSquareUnavaible();
     void makeSquareAvaible();

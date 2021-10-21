@@ -22,3 +22,4 @@ bool Queen::isAvaible(){
 void Queen::printValue() {
     std::cout << "Q ";
 }
+

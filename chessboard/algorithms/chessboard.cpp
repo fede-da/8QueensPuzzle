@@ -15,8 +15,9 @@
 
 Chessboard::Chessboard(){
     squares.reserve(10);
+    queens.reserve(8);
     for(int i = 0;i<10;i++){
-        std::vector<std::unique_ptr<Square>> nv;
+        std::vector<std::unique_ptr<Square> > nv;
         nv.reserve(10);
         for(int j = 0;j<10;j++){
             Square s = Square(i,j);
@@ -28,7 +29,6 @@ Chessboard::Chessboard(){
     }
 }
 
-
 void Chessboard::printBoard(){
     std::cout<<"Print begins: \n";
     for(int i = 1;i<9;i++){
@@ -37,6 +37,10 @@ void Chessboard::printBoard(){
         }
         std::cout<< std::endl;
     }
+}
+
+std::vector<Queen> Chessboard::getQueens(){
+    return queens;
 }
 
 void Chessboard::printStatusAt(int x, int y){
@@ -52,6 +56,7 @@ void Chessboard::setQueen(int x, int y){
     Queen queen = Queen(x, y);
     *queenPtr = queen;
     squares[x][y]=std::move(queenPtr);
+    queens.push_back(queen);
 }
 
 void Chessboard::unsetQueen(int x,int y){
@@ -59,6 +64,7 @@ void Chessboard::unsetQueen(int x,int y){
     Square square = Square(x, y);
     *squarePtr = square;
     squares[x][y]=std::move(squarePtr);
+    queens.pop_back();
 }
 
 bool Chessboard::insertOnRow(int row,int col,int times,int queenRow){

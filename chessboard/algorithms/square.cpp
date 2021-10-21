@@ -20,6 +20,15 @@ Square:: Square(int nx, int ny)
     avaible=true;
 }
 
+int Square::getX(){
+    return x;
+}
+
+int Square::getY(){
+    return y;
+}
+
+
 void Square::printValue(){
     std::cout << isAvaible() << " ";
 };

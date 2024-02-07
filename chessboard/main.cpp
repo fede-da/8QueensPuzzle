@@ -56,7 +56,10 @@ int main(int, char const**)
 {
     std::vector<int> userIntegers = getTwoIntegersFromUser();
     Puzzle puzzle = Puzzle();
-    puzzle.solve(userIntegers[0],userIntegers[1]);
+    if(!puzzle.solve(userIntegers[0],userIntegers[1])){
+        std::cout << "No solution found";
+        return 0;
+    }
     puzzle.printBoard();
     std::vector<Queen> queensOnCb = puzzle.getQueens();
     std::cout <<"\n";

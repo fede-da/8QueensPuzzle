@@ -21,10 +21,42 @@
 // Here is a small helper for you! Have a look.
 using namespace sf;
 
+std::vector<int> getTwoIntegersFromUser() {
+    std::vector<int> values;
+    int number;
+
+    // First number input
+    std::cout << "Set the first queen's row value (between 1 and 8 included): ";
+    while (!(std::cin >> number) || number < 1 || number > 8) {
+        std::cout << "not valid: ";
+        std::cin.clear(); // reset the input
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard the input
+    }
+    values.push_back(number);
+    // Clear the input stream to handle any extra input
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    // Second number input
+    std::cout << "Set the first queen's row value (between 1 and 8 included): ";
+    while (!(std::cin >> number) || number < 1 || number > 8) {
+        std::cout << "not valid: ";
+        std::cin.clear(); // reset the input
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // discard the input
+    }
+    values.push_back(number);
+    // Clear the input stream again to handle any extra input
+    std::cin.clear();
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    return values;
+}
+
 int main(int, char const**)
 {
+    std::vector<int> userIntegers = getTwoIntegersFromUser();
     Puzzle puzzle = Puzzle();
-    puzzle.solve(0,0);
+    puzzle.solve(userIntegers[0],userIntegers[1]);
     puzzle.printBoard();
     std::vector<Queen> queensOnCb = puzzle.getQueens();
     std::cout <<"\n";

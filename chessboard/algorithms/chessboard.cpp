@@ -124,11 +124,12 @@ bool Chessboard::insertOnRow(int row,int col,int times,int queenRow){
     return false;
 }
 
+
 bool Chessboard::solve(int x,int y){
-    int rowToSet=4;
-    int colToSet=5;
-    setQueen(colToSet, rowToSet);
-    if(!insertOnRow(1, 1,0,colToSet)){
+    int rowToSet=1;
+    int colToSet=1;
+    setQueen(x, y);
+    if(!insertOnRow(1, 1,0,y)){
         std::cout<<"No solutions avaible for this position" << std::endl;
         return false;
     }

@@ -31,7 +31,7 @@ void Puzzle::printStatusAt(int x, int y){
 }
 
 bool Puzzle::solve(int x,int y){
-    return cb.solve(0,0);
+    return cb.solve(x,y);
 }
 
 std::vector<Queen> Puzzle::getQueens(){
